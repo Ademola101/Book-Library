@@ -4,6 +4,7 @@ const button = document.querySelector("button");
 const addForm = document.getElementById("addForm");
 const page = document.querySelector("#page");
 const parentButton = document.querySelector("#parentButton");
+const parentSubmitButton = document.querySelector("#parentSubmitButton");
 button.addEventListener('click', () => {
 
   const newBoook = input.value;
@@ -20,6 +21,9 @@ addForm.addEventListener("click", () => {
   pageInput.type = "text";
   page.appendChild(pageInput);
   parentButton.removeChild(addForm);
+  const pageButton = document.createElement("button");
+  pageButton.textContent = "Add Book";
+  parentSubmitButton.appendChild(pageButton)
 })
 const myLibrary = [];
 
