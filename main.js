@@ -18,17 +18,22 @@ button.addEventListener('click', () => {
 addForm.addEventListener("click", () => {
   const bookForm = document.createElement("form");
   bookForm.setAttribute("id", "bookForm");
+  bookForm.setAttribute("class", "bookForm");
   let label1 = document.createElement("label");
   label1.textContent = "Book Name:";
   let input1 = document.createElement("input");
   let label2 = document.createElement("label");
   label2.textContent = "Year:";
   let input2 = document.createElement("input");
+  let submitButton = document.createElement("button");
+  submitButton.textContent = "Submit";
 label1.appendChild(input1);
 label2.appendChild(input2);
   
-  bookForm.append(label1, label2);
+  bookForm.append(label1, label2, submitButton);
+  parentButton.removeChild(addForm);
   page.appendChild(bookForm);
+  
   })
 const myLibrary = [];
 
