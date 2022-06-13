@@ -1,18 +1,13 @@
 const input = document.querySelector('input');
 const list = document.querySelector("ul");
+const listItem = document.querySelector("li");
+const listText = document.querySelector("span");
 const button = document.querySelector("button");
 const addForm = document.getElementById("addForm");
 const page = document.querySelector("#page");
 const parentButton = document.querySelector("#parentButton");
 const parentSubmitButton = document.querySelector("#parentSubmitButton");
-button.addEventListener('click', () => {
-
-  const newBoook = input.value;
-  input.value = '';
-  const bookList = document.createElement("li");
-  bookList.textContent = newBoook
-  list.appendChild(bookList)
-});
+let myLibrary = [];
 
 
 addForm.addEventListener("click", () => {
@@ -35,7 +30,7 @@ label2.appendChild(input2);
   page.appendChild(bookForm);
   
   })
-const myLibrary = [];
+
 
 function Book(name,year) {
 this.name = name;
